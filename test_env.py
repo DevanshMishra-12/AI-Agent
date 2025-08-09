@@ -10,5 +10,5 @@ openai_key = os.getenv("OPENAI_API_KEY")
 if openai_key:
     print("OPENAI_API_KEY found")
 else:
-    print("OPENAI_API_KEY not found Check your .env file")
+    print("OPENAI_API_KEY not found ! Check your .env file")
 
