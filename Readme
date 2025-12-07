@@ -1,76 +1,46 @@
 🔥 Firecrawl MCP Agent — Web Scraping & Crawling via LangGraph
-
 This project implements an intelligent agent capable of scraping websites, crawling pages, and extracting structured data using Firecrawl MCP tools.
 It uses:
-
 LangGraph ReAct Agent
-
 OpenAI GPT-4o-mini
-
 MCP (Model Context Protocol) Tools
-
 Firecrawl MCP Server
-
 Async Python runtime
-
 The agent runs in your terminal and dynamically decides when to call Firecrawl tools to gather web data.
 
 🚀 Features
-
 🕷️ Scrape pages using Firecrawl's MCP tools
-
 🌐 Crawl full websites
-
 📄 Extract structured data (JSON, markdown, text, etc.)
-
 🤖 Uses ReAct reasoning to choose the right tool
-
 🔌 MCP protocol used for remote tool communication
-
 ⏱️ Fully asynchronous for high performance
-
 📦 Requirements
 Environment
 
 Python 3.10+
-
 Node.js installed
-
 Firecrawl MCP package (npx firecrawl-mcp)
-
 .env file with required API keys
-
 Python libraries
 pip install mcp langchain_mcp_adapters langgraph langchain-openai python-dotenv
 
 🔑 Environment Variables
-
 Create a .env file:
 
 OPENAI_API_KEY=your_openai_key
 FIRECRAWL_API_KEY=your_firecrawl_key
 
 🛠️ How It Works
-
 The script loads your OpenAI model.
-
 It starts the Firecrawl MCP server using:
-
 npx firecrawl-mcp
-
-
 MCP tools are loaded dynamically.
-
 A ReAct agent is created using LangGraph.
-
 The terminal enters a chat-loop, where the agent:
-
 Reads user input
-
 Processes with reasoning
-
 Calls Firecrawl tools when needed
-
 Returns formatted results
 
 📜 Code Overview
@@ -117,21 +87,12 @@ Convert the scraped data into structured JSON.
 
 ❗ Troubleshooting
 Error: ModuleNotFoundError
-
 Ensure MCP modules are installed:
-
 npm install -g firecrawl-mcp
-
 Stuck waiting for response
-
 Some terminals block async I/O. Run in a clean console (CMD, PowerShell, or VSCode).
 
 📌 Notes & Tips
-
 Firecrawl API key is required for scraping/crawling.
-
 Keep messages short (<175k chars) due to model limits.
-
 Use quit inside the terminal to exit the agent.
-
-📄 License
