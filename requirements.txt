@@ -1,0 +1,12 @@
+streamlit
+python-dotenv
+
+openai
+langchain
+langchain-openai
+langgraph
+langchain_mcp_adapters
+mcp
+
+requests
+numpy
